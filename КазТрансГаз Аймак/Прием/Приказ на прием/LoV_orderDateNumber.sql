@@ -1,0 +1,2 @@
+select to_char(a.ass_attribute_date1,'DD.MM.YYYY')||'/'||a.ass_attribute1  from per_all_assignments_m a where a.assignment_type = 'E' and 
+a.action_code in ('HIRE','REHIRE') and a.person_id = (select t.person_id from per_person_names_f t where t.last_name||' '||t.first_name||' '||t.middle_names =:fio   and t.name_type = 'GLOBAL')
