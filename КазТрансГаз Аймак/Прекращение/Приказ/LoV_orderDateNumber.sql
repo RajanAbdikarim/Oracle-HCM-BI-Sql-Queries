@@ -1,0 +1,1 @@
+select to_char(a.attribute_date1,'DD.MM.YYYY')||'/'||a.attribute2  from PER_PERIODS_OF_SERVICE a where a.actual_termination_date is not null and a.person_id = (select t.person_id from per_person_names_f t where t.last_name||' '||t.first_name||' '||t.middle_names =:fio   and t.name_type = 'GLOBAL')
