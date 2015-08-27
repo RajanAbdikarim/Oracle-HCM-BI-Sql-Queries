@@ -1,0 +1,1 @@
+select  t.last_name||' '||t.first_name||' '||t.middle_names  from per_person_names_f t where t.name_type = 'GLOBAL' order by t.last_name,t.first_name
